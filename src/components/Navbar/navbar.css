@@ -2,9 +2,8 @@
   text-align: left;
   top: 0;
   background-color: #000020;
-  width: 100%;
+  width: 100vw;
   height: 80px;
-  padding-left: 50px;
   font-size: 20px;
   z-index: 1;
 }
@@ -16,4 +15,5 @@
   line-height: 80px;
   color: #EEEEEE;
   cursor: pointer;
+  padding-left: 50px;
 }
