@@ -1,5 +1,6 @@
 .title-card-container{
-  width: 600px;
+  width: 85vw;
+  max-width: 800px;
   height: 100px;
   display: flex;
   background-color: white;
@@ -8,11 +9,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 10px 0 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 
 .title-container p{
-  font-size: small;
+  font-family: 'roboto';
 }
 
 .buttons-container{
@@ -23,6 +25,18 @@
 .buttons-container a{
   outline: none;
   text-decoration: none;
-  color: #008000;
+  padding: 10px;
+  /* color: #008000; */
 }
 
+.delete-button{
+  color: #d34240;
+}
+
+.edit-button{
+  color: #5379a4;
+}
+
+.arrow-button{
+  color: #4eb653;
+}
