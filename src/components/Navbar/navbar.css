@@ -1,7 +1,7 @@
 .navbar{
-  text-align: left;
+  text-align: right;
   top: 0;
-  background-color: #000020;
+  background-color: #82a1b1;
   width: 100vw;
   height: 80px;
   font-size: 20px;
@@ -13,7 +13,13 @@
 .navbar-logo{
   height: 80px;
   line-height: 80px;
-  color: #EEEEEE;
+  color: #000;
   cursor: pointer;
-  padding-left: 50px;
+  padding: 0 50px;
+  
+}
+
+.navbar-logo p{
+  font-weight: 600;
+  font-family: 'roboto';
 }

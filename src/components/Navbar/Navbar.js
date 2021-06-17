@@ -9,7 +9,9 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <div className='navbar-logo' onClick={toTheTop}> Challenge Blog </div>
+      <div className='navbar-logo' onClick={toTheTop}> 
+        <p>CHALLENGE BLOG</p> 
+      </div>
       
     </nav>
   )
