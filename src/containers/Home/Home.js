@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from "react-router-dom"
 import axios from 'axios'
 import TitleCard from '../../components/TitleCard/TitleCard'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -37,7 +38,7 @@ const Home = () => {
       })
 
     setData(req.data)
-    console.log(req.data)
+    // console.log(req.data)
   }
 
   useEffect(()=>{
@@ -46,10 +47,9 @@ const Home = () => {
 
   return (
     <div className='home-container'>
-      {data.slice(page.first,page.last).map( blog => {
-
+      {data.slice(page.first,page.last).map( post => {
         return(
-        <TitleCard key={blog.id} title={blog.title}/>
+          <TitleCard key={post.id} title={post.title} postId={post.id}/>
         )
       })}
       <div className="arrow-container">

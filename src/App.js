@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './containers/Home/Home'
 import Navbar from './components/Navbar/Navbar';
+import PostDetail from './containers/PostDetail/PostDetail';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/posts/:id" component={PostDetail} />
         </Switch>
       </div>
     </Router>
