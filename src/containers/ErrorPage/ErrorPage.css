@@ -1,0 +1,7 @@
+.error-page-container{
+  display: grid;
+  place-items: center;
+}
+.error-page-container h1{
+  padding: 40px;
+}

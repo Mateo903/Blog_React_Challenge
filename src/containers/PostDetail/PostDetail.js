@@ -12,13 +12,21 @@ const PostDetail = () => {
   const history = useHistory()
 
   const reqAPI = async() =>{
-    const req = await axios({
-        method: 'GET', 
-        url: `${APIUrl}/${id}`,
-      })
-
-    setData(req.data)
-    console.log(req.data)
+    try{
+      const req = await axios({
+          method: 'GET', 
+          url: `${APIUrl}/${id}`,
+        })
+      if (req.status !== 200) {
+          throw new Error(`HTTP error! status: ${req.status}`);
+      }else{
+        setData(req.data)
+        console.log(req)
+      }
+    } catch (error) {
+      history.push('/404')
+      console.log(error)
+    }
   }
 
   useEffect(()=>{

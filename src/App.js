@@ -10,6 +10,7 @@ import Navbar from './components/Navbar/Navbar';
 import PostDetail from './containers/PostDetail/PostDetail';
 import CreatePost from './containers/CreatePost/CreatePost';
 import EditPost from './containers/EditPost/EditPost';
+import ErrorPage from './containers/ErrorPage/ErrorPage';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             <CreatePost/>
           </Route>
           <Route exact path="/editpost/:id" component={EditPost} />
+          <Route>
+            <ErrorPage/>
+          </Route>
         </Switch>
       </div>
     </Router>
