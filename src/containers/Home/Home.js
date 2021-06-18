@@ -69,6 +69,10 @@ const Home = () => {
 
   return (
     <div className='home-container'>
+      <div className="arrow-container">
+        <ArrowBackIosIcon onClick={previousPage} />
+        <ArrowForwardIosIcon onClick={nextPage} />
+      </div>
       {data.slice(page.first,page.last).map( post => {
         return(
           <TitleCard key={post.id} title={post.title} postId={post.id} handleDelete={handleDelete} />
