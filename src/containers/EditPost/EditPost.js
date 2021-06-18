@@ -15,6 +15,7 @@ const EditPost = () => {
       })
 
     setData(req.data)
+    console.log(req)
   }
 
   useEffect(()=>{
@@ -41,14 +42,6 @@ const EditPost = () => {
   return (
     <div>
       {conditionalRender(data.title)}
-      {/* <CreatePost 
-        title='Edit the Post'
-        method='PUT'        
-        contentValue={data.body}
-        titleText={data.title}
-        buttonText='Edit the Post'
-        id={id}
-      /> */}
     </div>
   )
 }

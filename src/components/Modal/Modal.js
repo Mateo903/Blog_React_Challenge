@@ -8,10 +8,8 @@ const Modal = (props) => {
   useEffect(()=>{
     if(props.active){
       setIsActive(true)
-      console.log('Modal activo')
     }else{
       setIsActive(false)
-      console.log('else')
     }
   }, [props.active, props.update])
 
