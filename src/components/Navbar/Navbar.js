@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className="button-nav-container">
         <Link to={'/home'} className="homebutton" ><HomeIcon  style={{ fontSize: 40 }} /></Link>
-        <Link to={'/home'} className="addbutton" ><AddBoxIcon  style={{ fontSize: 40 }} /></Link>
+        <Link to={'/createpost'} className="addbutton" ><AddBoxIcon  style={{ fontSize: 40 }} /></Link>
       </div>
       <div className='navbar-logo' onClick={toTheTop}> 
         <p>BLOG</p> 

@@ -19,7 +19,7 @@ const PostDetail = () => {
 
   useEffect(()=>{
     reqAPI()
-  },[])
+  },[id])
 
   return (
     <div>
