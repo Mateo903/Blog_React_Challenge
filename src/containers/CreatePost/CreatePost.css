@@ -1,0 +1,47 @@
+.create-post-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.title-container{
+  color: #777777;
+  font-weight: 400;
+  font-family: 'roboto';
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.title-field{
+  width: 90vw;
+  max-width: 600px;
+}
+
+.content-field{
+  margin-top: 50px;
+  width: 90vw;
+  max-width: 800px;
+}
+
+.buttons-create-post-container{
+  width: 90vw;
+  max-width: 800px;
+  display: flex;
+  margin: 50px 0;
+}
+
+.button-create{
+  padding-right: 50px;
+}
+
+@media (max-width: 900px) {
+  .buttons-create-post-container{
+    justify-content: space-around;
+  }
+  
+  .button-create{
+    padding-right: 0;
+  }
+  
+}
