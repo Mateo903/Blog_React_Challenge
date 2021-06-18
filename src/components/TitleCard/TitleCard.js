@@ -1,5 +1,4 @@
 import React from 'react'
-import {useHistory} from "react-router"
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -10,8 +9,6 @@ import './titlecard.css'
 
 const TitleCard = (props) => {
 
-  const history = useHistory()
-
 
   return (
     <div className='title-card-container'>
@@ -19,7 +16,7 @@ const TitleCard = (props) => {
       <div className='buttons-container'>
         <a href='http://www.google.com' target="_blank" className='delete-button' rel="noreferrer"><DeleteIcon/></a>
         <a href='http://www.google.com' target="_blank" className='edit-button' rel="noreferrer"><EditIcon/></a>
-        <Link to={`/posts/${props.postId}`} ><ArrowForwardIcon/></Link>
+        <Link to={`/posts/${props.postId}`} className='arrow-button'><ArrowForwardIcon/></Link>
       </div>
     </div>
   )

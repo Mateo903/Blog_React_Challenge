@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import {Link} from "react-router-dom"
 import axios from 'axios'
 import TitleCard from '../../components/TitleCard/TitleCard'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -38,7 +37,6 @@ const Home = () => {
       })
 
     setData(req.data)
-    // console.log(req.data)
   }
 
   useEffect(()=>{
