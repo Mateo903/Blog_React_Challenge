@@ -5,17 +5,17 @@ import { useHistory } from 'react-router';
 import './CreatePost.css'
 import axios from 'axios'
 
-const CreatePost = () => {
+const CreatePost = (props) => {
   const history = useHistory()
-  const [dataToSend,setDataToSend] = useState({title:'', body:''})
+  const [dataToSend,setDataToSend] = useState({title:props.titleText || '', body: props.contentValue ||''})
   const [errorTitle, setErrorTitle] = useState({error: false, text:''})
   const [errorContent, setErrorContent] = useState({error: false, text:''})
   const APIUrl = 'https://jsonplaceholder.typicode.com/posts'
 
   const reqAPI = async() =>{
     const req = await axios({
-        method: 'POST', 
-        url: APIUrl,
+        method: props.method || 'POST', 
+        url: props.urlId || APIUrl,
         data: dataToSend,
       })
       console.log(req)
@@ -30,13 +30,14 @@ const CreatePost = () => {
   
   return (
     <div className="create-post-container">
-      <div className='title-container'>
-        <p>Create a New Post</p>
+      <div className='title-create-container'>
+        <p>{props.title || 'Create a New Post'}</p>
       </div>
       <div className="title-field" >
         <TextField  
           id="title-field" 
           label="Title" 
+          defaultValue={props.titleText}
           fullWidth
           required
           helperText={errorTitle.text}
@@ -55,6 +56,7 @@ const CreatePost = () => {
         <TextField  
           id="content-field" 
           label="Content" 
+          defaultValue={props.contentValue}
           variant="outlined" 
           multiline 
           rows={10} 
@@ -76,7 +78,7 @@ const CreatePost = () => {
       <div className="buttons-create-post-container">
         <div className="button-create">
           <Button variant="contained" color="primary" onClick={handleClick}>
-          Create Post
+            {props.buttonText ||'Create Post'}
           </Button>
         </div>
         <div className="button-back">

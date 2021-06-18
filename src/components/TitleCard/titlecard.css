@@ -14,6 +14,8 @@
 
 
 .title-container p{
+  color: #444444;
+  font-weight: 200;
   font-family: 'roboto';
 }
 
@@ -25,12 +27,14 @@
 .buttons-container a{
   outline: none;
   text-decoration: none;
-  padding: 10px;
-  /* color: #008000; */
+  padding: 5px;
 }
 
 .delete-button{
+  padding: 10px;
   color: #d34240;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .edit-button{

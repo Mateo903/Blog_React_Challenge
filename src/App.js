@@ -9,6 +9,7 @@ import Home from './containers/Home/Home'
 import Navbar from './components/Navbar/Navbar';
 import PostDetail from './containers/PostDetail/PostDetail';
 import CreatePost from './containers/CreatePost/CreatePost';
+import EditPost from './containers/EditPost/EditPost';
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/" component={Home} />
           <Route exact path="/posts/:id" component={PostDetail} />
-          <Route exact path="/createpost" component={CreatePost} />
+          <Route exact path="/createpost" >
+            <CreatePost/>
+          </Route>
+          <Route exact path="/editpost/:id" component={EditPost} />
         </Switch>
       </div>
     </Router>
